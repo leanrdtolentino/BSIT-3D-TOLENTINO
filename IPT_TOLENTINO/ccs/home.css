@@ -1,0 +1,143 @@
+/* General Styles */
+body { 
+  margin: 0;
+  font-family: 'Georgia', serif; 
+  background: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navigation Bar */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #ff6f3c;
+  transform: scale(1.1);
+}
+
+nav .cta {
+  background-color: #ff6f3c;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav .cta:hover {
+  background-color: #d1582f;
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.image-container img {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Section */
+.details {
+  max-width: 500px;
+}
+
+.details h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.details .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.details .actions {
+  margin: 20px 0;
+}
+
+.details .actions button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.details .actions button:hover {
+  background: #444444;
+  transform: translateY(-2px);
+}
+
+.details .synopsis {
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    margin: 0 auto;
+  }
+
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6f3c;
+}
+
+nav .cta {
+  background-color: #ff6f3c;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav .cta:hover {
+  background-color: #d1582f;
+  transform: scale(1.05);
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #fff, #f4f4f9);
+}
+
+/* Portfolio Heading */
+.portfolio .heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio .heading small {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio .heading h3 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Filter Buttons */
+#myBtnContainer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#myBtnContainer .filter-item {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 25px;
+  font-size: 14px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#myBtnContainer .filter-item:hover,
+#myBtnContainer .filter-item.active {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Cards */
+.portfolio-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 5px solid #000;
+}
+
+/* Card Content */
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px 12px;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.badge.bg-secondary {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Links and Buttons */
+.link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .card img {
+    height: 180px;
+  }
+
+  .portfolio .heading h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio .heading h3 {
+    font-size: 1.8rem;
+  }
+
+  #myBtnContainer .filter-item {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-body {
+    grid-template-columns: 1fr;
+  }
+
+  #myBtnContainer {
+    margin-bottom: 20px;
+  }
+}
